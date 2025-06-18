@@ -7,8 +7,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import LanguageSwitcher from '@/components/layout/LanguageSwitcher';
 import clsx from 'clsx';
-
-import {Container} from "@/components/Container";
+import { Container } from '@/components/Container';
 
 type NavbarProps = {
     lang: 'fr' | 'en';
@@ -26,13 +25,12 @@ type NavbarProps = {
     };
 };
 
-
 const NavLink: FC<{ href: string; label: string; isActive: boolean }> = ({ href, label, isActive }) => (
     <Link
         href={href}
         className={clsx(
-            'transition-all duration-300 hover:text-teal-600 dark:hover:text-teal-400 font-light text-sm',
-            isActive ? 'text-teal-600 dark:text-teal-400 font-semibold' : 'text-gray-800 dark:text-white'
+            'transition-all duration-300 hover:text-oranger font-light text-sm',
+            isActive ? 'text-oranger font-semibold' : 'text-soft'
         )}
     >
         {label}
@@ -51,26 +49,30 @@ const Navbar: FC<NavbarProps> = ({ lang, dict }) => {
     ];
 
     return (
-        <header className="bg-black shadow relative z-50 flex flex-none flex-col">
+        <header className="w-full py-6 lg:h-[12vh] sticky transition-colors duration-500 backdrop-blur top-0 z-50 bg-opacity-90 bg-bodyColor">
             <Container>
-                <div className="flex justify-between items-center h-16">
-                    <div className="text-md font-bold text-zinc-800 dark:text-white leading-tight">
+                <div className="relative flex items-center justify-between h-16">
+                    {/* Left block: Name + position */}
+                    <div className="text-md font-bold text-white leading-tight z-10">
                         {dict.profile.name}
-                        <span className="block text-sm font-normal text-gray-500 dark:text-gray-400">
-                          {dict.profile.position}
-                        </span>
+                        <span className="block text-sm font-normal text-soft">
+                      {dict.profile.position}
+                    </span>
                     </div>
 
-                    <div className="hidden md:flex gap-6 items-center">
+                    {/* Center block: navigation links */}
+                    <div className="hidden font-medium md:flex gap-6 absolute left-1/2 -translate-x-1/2 z-0 bg-white/10 px-8 py-2 rounded-full shadow-lg ring-1 shadow-zinc-800/5 ring-white/40 backdrop-blur-sm">
                         {links.map(({ href, label }) => (
                             <NavLink key={href} href={href} label={label} isActive={pathname === href} />
                         ))}
-
                     </div>
-                    <div>
+
+                    {/* Right block: language switcher */}
+                    <div className="hidden md:flex z-10">
                         <LanguageSwitcher />
                     </div>
 
+                    {/* Mobile menu toggle */}
                     <div className="md:hidden">
                         <button
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -82,6 +84,7 @@ const Navbar: FC<NavbarProps> = ({ lang, dict }) => {
                     </div>
                 </div>
 
+                {/* Mobile menu */}
                 <AnimatePresence>
                     {mobileMenuOpen && (
                         <motion.div

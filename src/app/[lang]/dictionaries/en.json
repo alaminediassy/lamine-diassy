@@ -1,9 +1,15 @@
 {
+  "about": {
+    "title": "About Me",
+    "description": "Driven by passion and guided by experience, I thrive at the intersection of code and creativity.",
+    "background": "With a strong foundation in computer science and hands-on experience in fullstack development, I enjoy building performant and scalable web applications.",
+    "journey": "After completing my academic training in software engineering, I joined Mythec as an apprentice. There, I contributed to several key digital projects, applying modern technologies and best development practices. I constantly seek to improve, learn, and share my knowledge with the developer community."
+  },
   "profile": {
     "name": "Mamadou Lamine DIASSY",
     "position": "Fullstack developer",
     "grade": "Software Engineering Expert",
-    "description": "Passionate software engineer and fullstack developer, currently working as an apprentice at Mythec, where I build modern and efficient web solutions."
+    "description": "I’m a fullstack developer and apprentice at Mythec, specializing in Microsoft 365 solutions (SharePoint, Power Platform). Passionate about design and photography, I also work as a freelancer, helping small businesses and individuals create modern websites, impactful brand identities, and visual communication materials. My goal is to combine technology and creativity to deliver custom digital experiences"
   },
   "navbar": {
     "home": "Home",
