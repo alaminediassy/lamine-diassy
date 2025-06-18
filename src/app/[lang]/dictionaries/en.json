@@ -1,0 +1,18 @@
+{
+  "profile": {
+    "name": "Mamadou Lamine DIASSY",
+    "position": "Fullstack developer",
+    "grade": "Software Engineering Expert",
+    "description": "Passionate software engineer and fullstack developer, currently working as an apprentice at Mythec, where I build modern and efficient web solutions."
+  },
+  "navbar": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Welcome to my portfolio",
+    "description": "Fullstack developer"
+  }
+}
