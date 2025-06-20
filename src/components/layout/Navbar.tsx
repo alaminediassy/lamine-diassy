@@ -2,28 +2,13 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FC, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { FC } from 'react';
 import LanguageSwitcher from '@/components/layout/LanguageSwitcher';
 import clsx from 'clsx';
 import { Container } from '@/components/Container';
+import { Popover, PopoverButton, PopoverBackdrop, PopoverPanel } from '@headlessui/react';
+import {GridPattern} from "@/components/GridPattern";
 
-type NavbarProps = {
-    lang: 'fr' | 'en';
-    dict: {
-        navbar: {
-            home: string;
-            projects: string;
-            about: string;
-            contact: string;
-        };
-        profile: {
-            name: string;
-            position: string;
-        };
-    };
-};
 
 const NavLink: FC<{ href: string; label: string; isActive: boolean }> = ({ href, label, isActive }) => (
     <Link
@@ -37,10 +22,53 @@ const NavLink: FC<{ href: string; label: string; isActive: boolean }> = ({ href,
     </Link>
 );
 
-const Navbar: FC<NavbarProps> = ({ lang, dict }) => {
-    const pathname = usePathname();
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+const MobileNavItem = ({ href, children }: { href: string; children: React.ReactNode }) => (
+    <li>
+        <PopoverButton as={Link} href={href} className="block py-2 text-soft hover:text-oranger">
+            {children}
+        </PopoverButton>
+    </li>
+);
 
+const MobileNavigation = ({ links }: { links: { href: string; label: string }[] }) => (
+    <Popover>
+        <PopoverButton className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg ring-1 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+            Menu
+            <svg viewBox="0 0 8 6" aria-hidden="true" className="ml-3 h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400">
+                <path d="M1.75 1.75 4 4.25l2.25-2.5" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+        </PopoverButton>
+        <PopoverBackdrop className="fixed inset-0 z-50 bg-zinc-800/40 backdrop-blur-xs" />
+        <PopoverPanel className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-zinc-800">
+            <nav>
+                <ul className="divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
+                    {links.map((link) => (
+                        <MobileNavItem key={link.href} href={link.href}>
+                            {link.label}
+                        </MobileNavItem>
+                    ))}
+                </ul>
+            </nav>
+        </PopoverPanel>
+    </Popover>
+);
+
+const Navbar: FC<{
+    lang: 'fr' | 'en';
+    dict: {
+        navbar: {
+            home: string;
+            projects: string;
+            about: string;
+            contact: string;
+        };
+        profile: {
+            name: string;
+            position: string;
+        };
+    };
+}> = ({ lang, dict }) => {
+    const pathname = usePathname();
     const links = [
         { href: `/${lang}`, label: dict.navbar.home },
         { href: `/${lang}/projects`, label: dict.navbar.projects },
@@ -49,60 +77,43 @@ const Navbar: FC<NavbarProps> = ({ lang, dict }) => {
     ];
 
     return (
-        <header className="w-full py-6 lg:h-[12vh] sticky transition-colors duration-500 backdrop-blur top-0 z-50 bg-opacity-90 bg-bodyColor">
-            <Container>
-                <div className="relative flex items-center justify-between h-16">
-                    {/* Left block: Name + position */}
-                    <div className="text-md font-bold text-white leading-tight z-10">
-                        {dict.profile.name}
-                        <span className="block text-sm font-normal text-soft">
-                      {dict.profile.position}
-                    </span>
-                    </div>
+        <section className="relative isolate rounded-b-3xl">
+            {/* Fond SVG animé */}
+            <div className="absolute inset-0 -z-10 h-[760px] bg-[#0A192F]">
+                <GridPattern
+                    className="absolute inset-0 h-full w-full fill-[#112240] stroke-white/5"
+                    yOffset={-200}
+                    interactive={typeof window !== 'undefined' && window.innerWidth > 768}
+                />
+            </div>
+            <header className="w-full py-6 lg:h-[12vh] sticky transition-colors duration-500 backdrop-blur top-0 z-50 bg-opacity-90 bg-bodyColor">
+                <Container>
+                    <div className="relative flex items-center justify-between h-16">
+                        <Link className="text-sm md:text-md font-bold text-white leading-tight z-10" href="/">
+                            {dict.profile.name}
+                            <span className="block text-xs font-normal text-soft">
+                          {dict.profile.position}
+                        </span>
+                        </Link>
 
-                    {/* Center block: navigation links */}
-                    <div className="hidden font-medium md:flex gap-6 absolute left-1/2 -translate-x-1/2 z-0 bg-white/10 px-8 py-2 rounded-full shadow-lg ring-1 shadow-zinc-800/5 ring-white/40 backdrop-blur-sm">
-                        {links.map(({ href, label }) => (
-                            <NavLink key={href} href={href} label={label} isActive={pathname === href} />
-                        ))}
-                    </div>
-
-                    {/* Right block: language switcher */}
-                    <div className="hidden md:flex z-10">
-                        <LanguageSwitcher />
-                    </div>
-
-                    {/* Mobile menu toggle */}
-                    <div className="md:hidden">
-                        <button
-                            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                            aria-label="Toggle menu"
-                            className="text-zinc-800 dark:text-white cursor-pointer"
-                        >
-                            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                        </button>
-                    </div>
-                </div>
-
-                {/* Mobile menu */}
-                <AnimatePresence>
-                    {mobileMenuOpen && (
-                        <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: 'auto', opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.3 }}
-                            className="flex flex-col md:hidden gap-4 overflow-hidden px-2 pt-4 pb-6"
-                        >
+                        <div className="hidden md:flex gap-6 absolute left-1/2 -translate-x-1/2 z-0 bg-white/10 px-8 py-2 rounded-full shadow-lg ring-1 shadow-zinc-800/5 ring-white/40 backdrop-blur-sm">
                             {links.map(({ href, label }) => (
                                 <NavLink key={href} href={href} label={label} isActive={pathname === href} />
                             ))}
+                        </div>
+
+                        <div className="hidden md:flex z-10">
                             <LanguageSwitcher />
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-            </Container>
-        </header>
+                        </div>
+
+                        <div className="md:hidden">
+                            <MobileNavigation links={links} />
+                        </div>
+                    </div>
+                </Container>
+            </header>
+        </section>
+
     );
 };
 
