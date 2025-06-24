@@ -6,6 +6,7 @@ import Image from "next/image";
 import Avatar from "@/images/avatar.png"
 import { useMultipleTypewriter } from "@/hooks/useTypewriter";
 import Link from "next/link";
+import Loader from "@/components/Loader";
 
 interface HeroProps {
     dict: {
@@ -75,6 +76,9 @@ export default function Hero({ dict }: HeroProps) {
                     >
                         ↓
                     </motion.a>
+                </div>
+                <div className="text-center">
+                    <Loader/>
                 </div>
             </Container>
     )
