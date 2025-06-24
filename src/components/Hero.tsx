@@ -6,8 +6,6 @@ import Image from "next/image";
 import Avatar from "@/images/avatar.png"
 import { useMultipleTypewriter } from "@/hooks/useTypewriter";
 import Link from "next/link";
-import {SocialLink} from "@/components/SocialLink";
-import {InstagramIcon, XIcon, GitHubIcon, LinkedInIcon} from "@/components/SocialIcons";
 
 interface HeroProps {
     dict: {
