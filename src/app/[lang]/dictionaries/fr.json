@@ -1,9 +1,12 @@
 {
   "about": {
+    "salutation": "Salut, je m'appelle \uD83D\uDC4B",
     "title": "À propos de moi",
+    "intro": "Je suis Mamadou Lamine Diassy, développeur fullstack spécialisé en ingénierie logicielle.",
     "description": "Animé par la passion et guidé par l’expérience, je m’épanouis à l’intersection du code et de la créativité.",
     "background": "Avec une solide formation en informatique et une expérience pratique en développement fullstack, j’aime concevoir des applications web performantes et évolutives.",
-    "journey": "Après avoir terminé ma formation académique en ingénierie logicielle, j’ai rejoint Mythec en tant qu’apprenti. J’y ai contribué à plusieurs projets numériques clés, en appliquant des technologies modernes et des bonnes pratiques de développement. Je cherche constamment à m’améliorer, apprendre, et partager mes connaissances avec la communauté des développeurs."
+    "journey": "Après avoir terminé ma formation académique en ingénierie logicielle, j’ai rejoint Mythec en tant qu’apprenti. J’y ai contribué à plusieurs projets numériques clés, en appliquant des technologies modernes et des bonnes pratiques de développement. Je cherche constamment à m’améliorer, apprendre, et partager mes connaissances avec la communauté des développeurs.",
+    "full": "Je suis un passionné de technologie, animé par la volonté constante de créer des solutions numériques à la fois utiles, performantes et esthétiques. Mon parcours est le reflet d’un engagement profond pour l’ingénierie logicielle et le développement web moderne.\n\nAprès une Licence en Mathématiques Appliquées et Informatique, j’ai acquis de solides compétences en algorithmique, en logique et en résolution de problèmes complexes. Ces bases m’ont permis d’aborder le développement logiciel avec rigueur et clarté.\n\nJ’ai ensuite poursuivi un Bachelor en Responsabilité de Projet Informatique, avec une spécialisation en développement web. Cette étape a révélé ma passion pour la création d’interfaces interactives, l’expérience utilisateur et la gestion de projets numériques en équipe.\n\nAujourd’hui, je termine un Master en Ingénierie Logicielle, tout en suivant un second Master en Développement et Validation Logicielle. Ce double cursus me permet d’approfondir des sujets tels que la conception logicielle, la qualité du code, la sécurité des applications, et les pratiques DevOps.\n\nJe suis également apprenti chez Mythec, où je travaille sur des projets concrets, en exploitant les technologies Microsoft 365 (SharePoint, Power Platform). En parallèle, je développe une activité freelance autour de la création de sites web, d’identités visuelles et de solutions digitales pour les PME.\n\nCe portfolio est le reflet de mon engagement : allier technique, design et valeur métier pour créer des expériences numériques impactantes."
   },
   "profile": {
     "name": "Mamadou Lamine DIASSY",
@@ -15,10 +18,30 @@
     "home": "Accueil",
     "projects": "Projets",
     "about": "À propos",
+    "skills": "Compétences",
     "contact": "Contact"
   },
   "home": {
     "title": "Bienvenue sur mon portfolio",
     "description": "Développeur fullstack"
+  },
+  "follow": {
+    "x": "Me suivre sur X",
+    "instagram": "Me suivre sur Instagram",
+    "github": "Me suivre sur Github",
+    "linkedin": "Me suivre sur Linkedin"
+  },
+  "copyright": {
+    "desc": "Mamadou Lamine DIASSY. Tous Droits réservés.",
+    "year": 2025
+  },
+  "skills": {
+    "title": "Mes compétences",
+    "subtitle": "Voici les technologies et outils que je maîtrise",
+    "categories": {
+      "frontend": "Développement Frontend",
+      "backend": "Développement Backend",
+      "tools": "Outils & Environnement"
+    }
   }
 }

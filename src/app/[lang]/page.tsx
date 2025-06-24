@@ -1,6 +1,9 @@
 // app/[lang]/page.tsx
 import { getDictionary } from './dictionaries'
-import Hero from "@/components/Hero"
+import Hero from '@/components/Hero'
+import HeroBackground from "@/components/HeroBackground";
+import RightSide from "@/components/RightSide";
+import LeftSide from "@/components/LeftSide";
 
 export default async function Home({
                                        params,
@@ -12,7 +15,12 @@ export default async function Home({
 
     return (
         <main>
-            <Hero dict={dict} />
+            <section className="relative isolate rounded-b-3xl min-h-[760px] bg-[#0A192F]">
+                <HeroBackground />
+                <Hero dict={dict} />
+                <RightSide/>
+                <LeftSide/>
+            </section>
         </main>
     )
 }

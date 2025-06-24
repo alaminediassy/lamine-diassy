@@ -1,9 +1,12 @@
 {
   "about": {
+    "salutation": "Hello, i'm \uD83D\uDC4B",
     "title": "About Me",
+    "intro": "I'm Mamadou Lamine Diassy, a fullstack developer specialized in software engineering.",
     "description": "Driven by passion and guided by experience, I thrive at the intersection of code and creativity.",
     "background": "With a strong foundation in computer science and hands-on experience in fullstack development, I enjoy building performant and scalable web applications.",
-    "journey": "After completing my academic training in software engineering, I joined Mythec as an apprentice. There, I contributed to several key digital projects, applying modern technologies and best development practices. I constantly seek to improve, learn, and share my knowledge with the developer community."
+    "journey": "After completing my academic training in software engineering, I joined Mythec as an apprentice. There, I contributed to several key digital projects, applying modern technologies and best development practices. I constantly seek to improve, learn, and share my knowledge with the developer community.",
+    "full": "I'm a technology enthusiast driven by a constant desire to build digital solutions that are useful, high-performing, and visually appealing. My journey reflects a deep commitment to software engineering and modern web development.\n\nAfter earning a Bachelor's degree in Applied Mathematics and Computer Science, I gained solid skills in algorithms, logic, and problem-solving. This strong foundation allows me to approach software development with clarity and precision.\n\nI then pursued a Bachelor's degree in IT Project Management with a focus on web development. That’s where I discovered my passion for crafting interactive interfaces, enhancing user experience, and managing digital projects in a team environment.\n\nToday, I'm completing a Master's in Software Engineering while also pursuing a second Master's in Software Development and Validation. This dual path allows me to dive deeper into advanced topics like software design, code quality, application security, and DevOps practices.\n\nI'm also an apprentice at Mythec, contributing to real-world projects using Microsoft 365 technologies (SharePoint, Power Platform). Alongside that, I work as a freelance developer helping small businesses create custom websites, brand identities, and digital solutions.\n\nThis portfolio represents my commitment to combining technology, design, and business value to deliver impactful digital experiences."
   },
   "profile": {
     "name": "Mamadou Lamine DIASSY",
@@ -15,10 +18,30 @@
     "home": "Home",
     "projects": "Projects",
     "about": "About",
+    "skills": "Skills",
     "contact": "Contact"
   },
   "home": {
     "title": "Welcome to my portfolio",
     "description": "Fullstack developer"
+  },
+  "follow": {
+    "x": "Follow me on X",
+    "instagram": "Follow me on Instagram",
+    "github": "Follow me on Github",
+    "linkedin": "Follow me on LinkedIn"
+  },
+  "copyright": {
+    "desc": "Mamadou Lamine DIASSY. All rights reserved.",
+    "year": 2025
+  },
+  "skills": {
+    "title": "Mes compétences",
+    "subtitle": "Voici les technologies et outils que je maîtrise",
+    "categories": {
+      "frontend": "Développement Frontend",
+      "backend": "Développement Backend",
+      "tools": "Outils & Environnement"
+    }
   }
 }

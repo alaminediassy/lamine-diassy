@@ -44,7 +44,7 @@ export default function Hero({ dict }: HeroProps) {
                         className="font-bold tracking-tight text-soft"
                     >
                         <h1 className="text-4xl sm:text-5xl mb-2 tracking-tight">{dict.profile.name}</h1>
-                        <span className="font-light text-2xl block min-h-[40px]">{typedGrade}</span>
+                        <span className="font-light text-xl block min-h-[40px]">{typedGrade}</span>
                     </motion.div>
                 </motion.div>
                 <div className="flex flex-col pt-6">
@@ -54,7 +54,7 @@ export default function Hero({ dict }: HeroProps) {
                         transition={{ duration: 0.5, delay: 0.8 }}
                         className="text-lg font-normal md:max-w-[900px] text-soft">
                         {dict.profile.description}{" "}
-                        <Link href="/About">
+                        <Link href="/about">
                         <span className="text-orange-600 uppercase text-sm font-medium inline-flex relative cursor-pointer h-7 overflow-x-hidden group ">
                             En savoir plus
                         <span
@@ -64,31 +64,15 @@ export default function Hero({ dict }: HeroProps) {
                         </Link>
                     </motion.p>
                 </div>
-                {/* Icônes sociales avec animation en cascade */}
-                <div className="flex gap-6">
-                    {[
-                        { icon: XIcon, href: 'https://x.com/diassyofficiel', label: 'Follow on X' },
-                        { icon: InstagramIcon, href: '#', label: 'Follow on Instagram' },
-                        { icon: GitHubIcon, href: 'https://github.com/alaminediassy', label: 'Follow on GitHub' },
-                        { icon: LinkedInIcon, href: 'https://www.linkedin.com/in/mamadou-lamine-diassy-0946b31a6/', label: 'Follow on LinkedIn' },
-                    ].map((item, index) => (
-                        <motion.div
-                            key={item.label}
-                            initial={{ y: 10, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ duration: 0.5, delay: 0.9 + index * 0.2 }}
-                        >
-                            <SocialLink href={item.href} aria-label={item.label} icon={item.icon} />
-                        </motion.div>
-                    ))}
-                </div>
-                <div className="text-center mt-2">
+                {/* Icônes sociales avec animation en cascade supprimés */}
+
+                <div className="text-center mt-4">
                     <motion.a
-                        href="#about"
+                        href="#skills"
                         initial={{ y: 0 }}
                         animate={{ y: [0, 10, 0] }}
                         transition={{ repeat: Infinity, duration: 1.5 }}
-                        className="mx-auto flex items-center justify-center w-10 h-12 border-[1px] border-oranger rounded-full text-oranger text-xl"
+                        className="mx-auto flex items-center justify-center w-10 h-12 border-[1px] border-oranger rounded-full text-oranger text-xl hover:text-white hover:bg-oranger transition duration-200"
                         aria-label="Scroll to About section"
                     >
                         ↓

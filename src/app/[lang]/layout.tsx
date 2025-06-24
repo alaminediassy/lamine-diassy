@@ -7,7 +7,7 @@ import React from "react"
 
 import { twMerge } from "tailwind-merge";
 import { DM_Sans } from "next/font/google";
-import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
@@ -35,9 +35,10 @@ export default async function RootLayout({
     return (
         <html lang={lang} suppressHydrationWarning>
         <body className={twMerge(dmSans.className, "antialiased bg-[#0A192F]")}>
-        <Navbar lang={lang} dict={dict} />
-        {children}
-        </body>
+            <Navbar lang={lang} dict={dict} />
+            {children}
+            <Footer dict={dict}/>
+            </body>
         </html>
     )
 }
