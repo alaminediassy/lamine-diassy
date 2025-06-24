@@ -43,7 +43,7 @@ export default function Hero({ dict }: HeroProps) {
                         className="font-bold tracking-tight text-soft"
                     >
                         <h1 className="text-4xl sm:text-5xl mb-2 tracking-tight">{dict.profile.name}</h1>
-                        <span className="font-light text-xl block min-h-[40px]">{typedGrade}</span>
+                        <span className="font-light text-xl block min-h-[60px] lg:min-h-[40px]">{typedGrade}</span>
                     </motion.div>
                 </motion.div>
                 <div className="flex flex-col pt-6">
