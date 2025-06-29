@@ -40,10 +40,10 @@ export function Footer({ dict }: FooterProps) {
     return (
         <footer className="mt-32 flex-none">
             <ContainerOuter>
-                <div className="border-t border-zinc-100 pt-10 pb-16 ">
+                <div className="border-t border-soft-light pt-10 pb-16 ">
                     <ContainerInner>
                         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-                            <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-soft ">
+                            <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-soft-light ">
                                 <NavLink href="/">{dict.navbar.home}</NavLink>
                                 <NavLink href="/projects">{dict.navbar.projects}</NavLink>
                                 <NavLink href="/about">{dict.navbar.about}</NavLink>

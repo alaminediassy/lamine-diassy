@@ -2,7 +2,9 @@
 
 @theme {
   --color-soft: #ccd6f6;
+  --color-soft-light: #aab8e8;
   --color-oranger: #DF5601;
   --color-marine: #0A192F;
+  --color-marine-card: #112240;
 }
 

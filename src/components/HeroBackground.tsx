@@ -13,11 +13,14 @@ export default function HeroBackground() {
     }, [])
 
     return (
-        <div className="absolute inset-0 -z-10 h-[640px]">
-            <GridPattern
-                className="absolute inset-0 h-full w-full fill-[#112240] stroke-white/5"
-                interactive={isDesktop}
-            />
-        </div>
+        <>
+            <div className="absolute inset-0 -z-10 h-[640px]">
+                <GridPattern
+                    className="absolute inset-0 h-full w-full fill-[#112240] stroke-white/5"
+                    interactive={isDesktop}
+                />
+            </div>
+        </>
+
     )
 }

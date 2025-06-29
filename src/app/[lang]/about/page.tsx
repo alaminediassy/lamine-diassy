@@ -10,5 +10,9 @@ export default async function AboutPage({
     const { lang } = await params
     const dict = await getDictionary(lang)
 
-    return <About dict={dict} />
+    return (
+        <>
+            <About dict={dict} />
+        </>
+    )
 }

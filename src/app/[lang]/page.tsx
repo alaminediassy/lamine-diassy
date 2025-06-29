@@ -3,7 +3,7 @@ import { getDictionary } from './dictionaries'
 import Hero from '@/components/Hero'
 import HeroBackground from "@/components/HeroBackground";
 import RightSide from "@/components/RightSide";
-import LeftSide from "@/components/LeftSide";
+import {VSocialMediaLink} from "@/components/SocialMediaLink";
 
 export default async function Home({
                                        params,
@@ -19,7 +19,7 @@ export default async function Home({
                 <HeroBackground />
                 <Hero dict={dict} />
                 <RightSide/>
-                <LeftSide/>
+                <VSocialMediaLink/>
             </section>
         </main>
     )

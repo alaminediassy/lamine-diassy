@@ -6,7 +6,7 @@ import Image from "next/image";
 import Avatar from "@/images/avatar.png"
 import { useMultipleTypewriter } from "@/hooks/useTypewriter";
 import Link from "next/link";
-import Loader from "@/components/Loader";
+import {HSocialMediaLink} from "@/components/SocialMediaLink";
 
 interface HeroProps {
     dict: {
@@ -43,7 +43,7 @@ export default function Hero({ dict }: HeroProps) {
                         className="font-bold tracking-tight text-soft"
                     >
                         <h1 className="text-4xl sm:text-5xl mb-2 tracking-tight">{dict.profile.name}</h1>
-                        <span className="font-light text-xl block min-h-[60px] lg:min-h-[40px]">{typedGrade}</span>
+                        <span className="font-light text-xl block min-h-[60px] lg:min-h-[40px] text-soft-light">{typedGrade}</span>
                     </motion.div>
                 </motion.div>
                 <div className="flex flex-col pt-6">
@@ -51,7 +51,7 @@ export default function Hero({ dict }: HeroProps) {
                         initial={{ y: 10, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5, delay: 0.8 }}
-                        className="text-lg font-normal md:max-w-[900px] text-soft">
+                        className="text-lg font-normal md:max-w-[900px] text-soft-light">
                         {dict.profile.description}{" "}
                         <Link href="/about">
                         <span className="text-orange-600 uppercase text-sm font-medium inline-flex relative cursor-pointer h-7 overflow-x-hidden group ">
@@ -62,6 +62,9 @@ export default function Hero({ dict }: HeroProps) {
                         </span>
                         </Link>
                     </motion.p>
+                </div>
+                <div className="block xl:hidden">
+                    <HSocialMediaLink/>
                 </div>
                 {/* Icônes sociales avec animation en cascade supprimés */}
 
@@ -76,9 +79,6 @@ export default function Hero({ dict }: HeroProps) {
                     >
                         ↓
                     </motion.a>
-                </div>
-                <div className="text-center">
-                    <Loader/>
                 </div>
             </Container>
     )
