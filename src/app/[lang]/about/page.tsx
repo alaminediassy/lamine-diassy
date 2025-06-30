@@ -1,6 +1,7 @@
 // app/[lang]/about/page.tsx
 import { getDictionary } from '@/app/[lang]/dictionaries'
 import About from '@/components/About'
+import Experiences from "@/components/experiences/Experiences";
 
 export default async function AboutPage({
                                             params,
@@ -13,6 +14,7 @@ export default async function AboutPage({
     return (
         <>
             <About dict={dict} />
+            <Experiences dict={dict}/>
         </>
     )
 }

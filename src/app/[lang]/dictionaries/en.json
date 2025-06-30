@@ -44,44 +44,44 @@
       "tools": "Outils & Environnement"
     }
   },
-  "experiences": {
-    "title": "Parcours & Expériences",
-    "intro": "Un aperçu de mes expériences professionnelles et académiques qui ont façonné mon profil de développeur.",
-    "professionalTitle": "Expériences professionnelles",
-    "academicTitle": "Parcours académique",
-    "entries": [
-      {
-        "title": "Développeur fullstack & apprenti",
-        "company": "Mythec",
-        "description": "Développement d’applications web, automatisations Power Platform, intégration d’outils M365.",
-        "cta": "Voir l'entreprise",
-        "href": "https://mythec.fr",
-        "category": "pro"
-      },
-      {
-        "title": "Freelance Web Developer",
-        "company": "Indépendant",
-        "description": "Conception de sites web vitrines, identité visuelle, solutions sur mesure pour PME.",
-        "cta": "Voir mes projets",
-        "href": "/projects",
-        "category": "pro"
-      },
-      {
-        "title": "Master Expert en Ingénierie Logicielle",
-        "company": "ISCOD",
-        "description": "Spécialisation en DevOps, conception logicielle, validation, sécurité.",
-        "cta": "Voir l’école",
-        "href": "https://www.iscod.fr",
-        "category": "edu"
-      },
-      {
-        "title": "Bachelor Responsable de Projet Informatique",
-        "company": "Ynov Campus",
-        "description": "Gestion de projets web, développement frontend/backend, travail collaboratif.",
-        "cta": "Voir le cursus",
-        "href": "https://ynov.com",
-        "category": "edu"
-      }
-    ]
-  }
+  "experiencesPro": [
+    {
+      "country": "France",
+      "company": "Mythec",
+      "period": "February 2024 - February 2026",
+      "jobTitle": "Apprenticeship in Power Platform and M365 Development",
+      "description": "Development of modern WebParts with React and PowerShell. Integration of Microsoft 365 solutions to automate business processes.",
+      "technologies": ["React", "TypeScript", "PowerShell", "SharePoint", "Power Apps"]
+    },
+    {
+      "country": "Luxembourg",
+      "company": "Intrepide Studio",
+      "period": "August 2023 - December 2023",
+      "jobTitle": "Fullstack Development Internship",
+      "description": "Created showcase and e-commerce websites for local SMEs. Delivered custom integrations with responsive design and SEO optimization.",
+      "technologies": ["Next.js", "Tailwind CSS", "Stripe", "WordPress"]
+    }
+  ],
+  "educations": [
+    {
+      "university": "Institut Supérieur des Compétences de Demain",
+      "period": "February 2024 - November 2025",
+      "levelTitle": "Master's Degree in Software Engineering"
+    },
+    {
+      "university": "MEWO Campus Métiers",
+      "period": "September 2022 - July 2023",
+      "levelTitle": "Bachelor's Degree in IT Project Management"
+    },
+    {
+      "university": "Université Numérique Cheikh Hamidou Kane",
+      "period": "2020 - July 2022",
+      "levelTitle": "Master's Degree in Software Engineering"
+    },
+    {
+      "university": "Université Numérique Cheikh Hamidou Kane",
+      "period": "2018 - July 2020",
+      "levelTitle": "Bachelor's Degree in Applied Mathematics and Computer Science"
+    }
+  ]
 }
