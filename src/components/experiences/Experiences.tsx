@@ -5,6 +5,8 @@ import { type Metadata } from 'next';
 import { SimpleLayout } from "@/components/experiences/SimpleLayout";
 import { Section } from "@/components/experiences/Section";
 import {ExperienceProItems, FormationsItems} from "@/components/experiences/ExperiencesFormations";
+import { Experience, Formations } from "@/components/experiences/ExperiencesFormations";
+
 
 function ExperiencesSection({
                                 children,
@@ -24,7 +26,10 @@ export const metadata: Metadata = {
 };
 
 interface ExperiencesProps {
-    dict: never;
+    dict: {
+        experiencesPro: Experience[];
+        educations: Formations[];
+    };
 }
 
 export default function Experiences({ dict }: ExperiencesProps) {

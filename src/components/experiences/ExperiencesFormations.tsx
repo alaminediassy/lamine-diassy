@@ -1,7 +1,7 @@
 import React from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
-interface Experience {
+export interface Experience {
     country: string;
     company: string;
     period: string;
@@ -16,7 +16,7 @@ interface ExperiencesProProps {
     };
 }
 
-interface Formations {
+export interface Formations {
     university: string;
     period: string;
     levelTitle: string;
@@ -103,12 +103,12 @@ export function FormationsItems({ dict }: FormationsProps) {
                     <div key={index} className="md:grid md:grid-cols-3 md:items-baseline">
                         <div className="md:col-span-3 group relative flex flex-col items-start w-full">
                             <div className="relative z-10 flex flex-col space-y-1 my-2 w-full">
-                                <div className="flex items-center text-sm text-soft-light">
+                                <div className="flex items-center text-sm text-soft-light uppercase">
                                     {form.university}
                                 </div>
                             </div>
 
-                            <div className="relative z-10">
+                            <div className="relative z-10 space-y-1 my-2">
                                 <p className="text-sm font-medium text-soft-light">
                                     {form.period}
                                 </p>

@@ -51,7 +51,7 @@
       "period": "February 2024 - February 2026",
       "jobTitle": "Apprenticeship in Power Platform and M365 Development",
       "description": "Development of modern WebParts with React and PowerShell. Integration of Microsoft 365 solutions to automate business processes.",
-      "technologies": ["React", "TypeScript", "PowerShell", "SharePoint", "Power Apps"]
+      "technologies": ["React", "TypeScript", "PowerShell", "SharePoint", "Power Apps", "Microsoft 365"]
     },
     {
       "country": "Luxembourg",
@@ -59,7 +59,7 @@
       "period": "August 2023 - December 2023",
       "jobTitle": "Fullstack Development Internship",
       "description": "Created showcase and e-commerce websites for local SMEs. Delivered custom integrations with responsive design and SEO optimization.",
-      "technologies": ["Next.js", "Tailwind CSS", "Stripe", "WordPress"]
+      "technologies": ["Php", "HTML & CSS", "Javascript", "WordPress", "MySql", "ReactJS"]
     }
   ],
   "educations": [

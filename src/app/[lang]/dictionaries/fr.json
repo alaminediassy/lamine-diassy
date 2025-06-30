@@ -51,7 +51,7 @@
       "period": "Février 2024 - Février 2026",
       "jobTitle": "Alternance en Développement Power Plateform et M365",
       "description": "Développement de WebParts modernes avec React et PowerShell. Intégration de solutions Microsoft 365 pour automatiser les processus métier.",
-      "technologies": ["React", "TypeScript", "PowerShell", "SharePoint", "Power Apps"]
+      "technologies": ["React", "TypeScript", "PowerShell", "SharePoint", "Power Apps", "Microsoft 365"]
     },
     {
       "country": "Luxembourg",
@@ -59,7 +59,7 @@
       "period": "Août 2023 - Décembre 2023",
       "jobTitle": "Stage en Développement Fullstack",
       "description": "Création de sites vitrines et e-commerce pour des TPE/PME locales. Intégration sur mesure avec design responsive et optimisation SEO.",
-      "technologies": ["Next.js", "Tailwind CSS", "Stripe", "WordPress"]
+      "technologies": ["Php", "HTML & CSS", "Javascript", "WordPress", "MySql", "ReactJS"]
     }
   ],
   "educations": [
