@@ -1,6 +1,6 @@
 {
   "about": {
-    "salutation": "Hello, i'm \uD83D\uDC4B",
+    "salutation": "Hello, i'm 👋",
     "title": "About Me",
     "intro": "I'm Mamadou Lamine Diassy, a fullstack developer specialized in software engineering.",
     "description": "Driven by passion and guided by experience, I thrive at the intersection of code and creativity.",
@@ -16,14 +16,32 @@
   },
   "navbar": {
     "home": "Home",
-    "projects": "Projects",
-    "about": "About",
+    "presentation": "Presentation",
     "skills": "Skills",
+    "realisations": "Achievements",
+    "parcours": "Journey",
     "contact": "Contact"
   },
   "home": {
-    "title": "Welcome to my portfolio",
-    "description": "Fullstack developer"
+    "title": "Home",
+    "description": "Welcome to my portfolio",
+    "specialties": [
+      {
+        "title": "Software Engineering",
+        "description": "Designing robust, scalable, and maintainable applications using modern architectures and best practices.",
+        "icon": "Code2"
+      },
+      {
+        "title": "Cloud & M365",
+        "description": "Tailored collaboration solutions leveraging the power of Microsoft 365 and cloud specialized tools.",
+        "icon": "Cloud"
+      },
+      {
+        "title": "Product Vision",
+        "description": "Combining technical excellence with a deep focus on user needs and business business goals.",
+        "icon": "Lightbulb"
+      }
+    ]
   },
   "follow": {
     "x": "Follow me on X",
@@ -36,12 +54,139 @@
     "year": 2025
   },
   "skills": {
-    "title": "Mes compétences",
-    "subtitle": "Voici les technologies et outils que je maîtrise",
-    "categories": {
-      "frontend": "Développement Frontend",
-      "backend": "Développement Backend",
-      "tools": "Outils & Environnement"
+    "title": "My Skills",
+    "index": [
+      {
+        "slug": "react",
+        "title": "React",
+        "category": "technical",
+        "icon": "SiReact"
+      },
+      {
+        "slug": "typescript",
+        "title": "TypeScript",
+        "category": "technical",
+        "icon": "SiTypescript"
+      },
+      {
+        "slug": "nextjs",
+        "title": "Next.js",
+        "category": "technical",
+        "icon": "SiNextdotjs"
+      },
+      {
+        "slug": "tailwind",
+        "title": "Tailwind CSS",
+        "category": "technical",
+        "icon": "SiTailwindcss"
+      },
+      {
+        "slug": "nodejs",
+        "title": "Node.js",
+        "category": "technical",
+        "icon": "SiNodedotjs"
+      },
+      {
+        "slug": "communication",
+        "title": "Communication",
+        "category": "human",
+        "icon": "HiChat"
+      },
+      {
+        "slug": "teamwork",
+        "title": "Teamwork",
+        "category": "human",
+        "icon": "HiUserGroup"
+      },
+      {
+        "slug": "problem-solving",
+        "title": "Problem Solving",
+        "category": "human",
+        "icon": "HiLightBulb"
+      },
+      {
+        "slug": "adaptability",
+        "title": "Adaptability",
+        "category": "human",
+        "icon": "HiRefresh"
+      },
+      {
+        "slug": "autonomy",
+        "title": "Autonomy",
+        "category": "human",
+        "icon": "HiUser"
+      }
+    ],
+    "items": {
+      "react": {
+        "slug": "react",
+        "title": "React",
+        "category": "technical",
+        "icon": "SiReact",
+        "definition": "Proficiency in the React library for creating dynamic and performant user interfaces.",
+        "masteryLevel": "Advanced - Capable of designing complex and reusable architectures.",
+        "priorityInProfile": "Main engine of my frontend developments.",
+        "learningPace": "Learned rapidly during my Bachelor's and deepened during my Master's.",
+        "proofs": [
+          {
+            "anecdote": "Development of modern WebParts at Mythec.",
+            "results": "Improved ergonomics of internal tools.",
+            "addedValue": "Reduced page load times by 30%."
+          }
+        ],
+        "tips": "Always prioritize component composition for more flexibility.",
+        "selfCritique": "Still room for improvement on Next.js 15 Server Components.",
+        "evolution": "Following the evolution of React Forget and the React compiler.",
+        "relatedRealisations": [
+          "realisation-mythec"
+        ]
+      }
+    }
+  },
+  "realisations": {
+    "title": "My Achievements",
+    "index": [
+      {
+        "slug": "realisation-mythec",
+        "title": "M365 Modernization",
+        "thumbnail": "/images/mythec.jpg",
+        "shortDescription": "Modernization of the collaborative intranet via SharePoint and React."
+      }
+    ],
+    "items": {
+      "realisation-mythec": {
+        "slug": "realisation-mythec",
+        "title": "M365 Modernization",
+        "thumbnail": "/images/mythec.jpg",
+        "shortDescription": "Modernization of the collaborative intranet via SharePoint and React.",
+        "presentation": "UI redesign project for internal collaborative tools at Mythec.",
+        "context": {
+          "goals": "Simplify document access and automate workflows.",
+          "stakes": "Improve productivity for 50 employees.",
+          "risks": "Service disruption on critical tools."
+        },
+        "steps": [
+          "User needs analysis",
+          "UI mockup design",
+          "React/TypeScript component development",
+          "Testing and progressive deployment"
+        ],
+        "actors": [
+          "Me (Lead Developer)",
+          "My mentor (Technical validation)",
+          "End users (Feedback)"
+        ],
+        "results": {
+          "personal": "Deep mastery of SPFx and React integration in SharePoint.",
+          "project": "Adoption rate for new tools exceeding 90%."
+        },
+        "nextSteps": "Integration of Power Automate for further automation.",
+        "criticalPerspective": "The project took longer than expected during the testing phase.",
+        "relatedSkills": [
+          "react",
+          "typescript"
+        ]
+      }
     }
   },
   "experiencesPro": [
@@ -51,7 +196,14 @@
       "period": "February 2024 - February 2026",
       "jobTitle": "Apprenticeship in Power Platform and M365 Development",
       "description": "Development of modern WebParts with React and PowerShell. Integration of Microsoft 365 solutions to automate business processes.",
-      "technologies": ["React", "TypeScript", "PowerShell", "SharePoint", "Power Apps", "Microsoft 365"]
+      "technologies": [
+        "React",
+        "TypeScript",
+        "PowerShell",
+        "SharePoint",
+        "Power Apps",
+        "Microsoft 365"
+      ]
     },
     {
       "country": "Luxembourg",
@@ -59,7 +211,14 @@
       "period": "August 2023 - December 2023",
       "jobTitle": "Fullstack Development Internship",
       "description": "Created showcase and e-commerce websites for local SMEs. Delivered custom integrations with responsive design and SEO optimization.",
-      "technologies": ["Php", "HTML & CSS", "Javascript", "WordPress", "MySql", "ReactJS"]
+      "technologies": [
+        "Php",
+        "HTML & CSS",
+        "Javascript",
+        "WordPress",
+        "MySql",
+        "ReactJS"
+      ]
     }
   ],
   "educations": [

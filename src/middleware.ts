@@ -1,4 +1,4 @@
-import {NextRequest, NextResponse} from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
 const locales = ['fr', 'en'];
 const defaultLocale = 'fr';
@@ -10,8 +10,19 @@ export function middleware(request: NextRequest) {
         pathname.startsWith(`/${locale}`)
     );
 
-    // Si oui, on ne redirige pas
-    if (pathnameHasLocale) return;
+    // Redirect legacy routes to EIL-compliant routes
+    if (pathnameHasLocale) {
+        const [, lang, ...rest] = pathname.split('/');
+        const subPath = rest.join('/');
+
+        if (subPath === 'projects') {
+            return NextResponse.redirect(new URL(`/${lang}/realisations`, request.url));
+        }
+        if (subPath === 'about') {
+            return NextResponse.redirect(new URL(`/${lang}/presentation`, request.url));
+        }
+        return;
+    }
 
     request.nextUrl.pathname = `/${defaultLocale}${pathname}`;
     return NextResponse.redirect(request.nextUrl);
