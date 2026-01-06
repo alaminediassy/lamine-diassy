@@ -5,9 +5,8 @@ import { motion } from 'framer-motion'
 import { Container } from '@/components/Container'
 import Link from 'next/link'
 import { Mail } from 'lucide-react'
-import { Dictionary } from '@/types/content'
 
-export function ContactCTA({ dict, lang }: { dict: Dictionary; lang: string }) {
+export function ContactCTA({ lang }: { lang: string }) {
     return (
         <Container className="mt-32 mb-20">
             <motion.div

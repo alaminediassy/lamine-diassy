@@ -68,7 +68,7 @@ export default async function Home({
             </HomeSection>
 
             {/* Contact CTA */}
-            <ContactCTA dict={dict} lang={lang} />
+            <ContactCTA lang={lang} />
         </main>
     )
 }
