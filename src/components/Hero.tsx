@@ -26,7 +26,7 @@ export default function Hero({ dict }: HeroProps) {
     const typedGrade = useMultipleTypewriter([dict.profile.grade, dict.profile.position])
 
     return (
-        <Container className="mt-9">
+        <Container className="mt-6">
             <motion.div
                 initial={{ y: 10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}

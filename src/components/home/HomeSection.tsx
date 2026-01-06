@@ -16,7 +16,7 @@ export function HomeSection({
     return (
         <Container className="mt-24 sm:mt-32">
             <div className="flex flex-col gap-8 md:flex-row md:items-baseline md:justify-between">
-                <h2 className="text-3xl font-bold tracking-tight text-soft">
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-soft">
                     {title}
                 </h2>
                 {ctaHref && (
