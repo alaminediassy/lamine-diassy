@@ -10,9 +10,10 @@ import { IconResolver } from '@/components/ui/IconResolver'
 export default async function SkillDetailPage({
     params,
 }: {
-    params: Promise<{ lang: 'fr' | 'en'; slug: string }>
+    params: Promise<{ lang: string; slug: string }>
 }) {
-    const { lang, slug } = await params
+    const { lang } = (await params) as { lang: 'fr' | 'en' }
+    const { slug } = await params
     const dict = await getDictionary(lang)
     const skill = dict.skills.items[slug]
 

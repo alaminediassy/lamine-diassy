@@ -3,12 +3,12 @@ import { getDictionary } from '@/lib/i18n/dictionaries'
 import { RealisationCard } from '@/components/realisations/RealisationCard'
 import { SimpleLayout } from '@/components/experiences/SimpleLayout'
 
-export default async function RealisationsPage({
+export default async function ProjectsPage({
     params,
 }: {
-    params: Promise<{ lang: 'fr' | 'en' }>
+    params: Promise<{ lang: string }>
 }) {
-    const { lang } = await params
+    const { lang } = (await params) as { lang: 'fr' | 'en' }
     const dict = await getDictionary(lang)
 
     return (

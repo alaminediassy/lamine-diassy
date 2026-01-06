@@ -12,9 +12,9 @@ import { Container } from '@/components/Container'
 export default async function Home({
     params,
 }: {
-    params: Promise<{ lang: 'en' | 'fr' }>
+    params: Promise<{ lang: string }>
 }) {
-    const { lang } = await params
+    const { lang } = (await params) as { lang: 'en' | 'fr' }
     const dict = await getDictionary(lang)
 
     return (
