@@ -3,12 +3,12 @@ import { getDictionary } from '@/lib/i18n/dictionaries'
 import { SimpleLayout } from '@/components/experiences/SimpleLayout'
 import { Timeline } from '@/components/parcours/Timeline'
 
-export default async function ParcoursPage({
+export default async function ExperiencePage({
     params,
 }: {
-    params: Promise<{ lang: 'fr' | 'en' }>
+    params: Promise<{ lang: string }>
 }) {
-    const { lang } = await params
+    const { lang } = (await params) as { lang: 'fr' | 'en' }
     const dict = await getDictionary(lang)
 
     return (

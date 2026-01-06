@@ -6,12 +6,13 @@ import { notFound } from 'next/navigation'
 import { Section } from '@/components/experiences/Section'
 import { SkillCard } from '@/components/skills/SkillCard'
 
-export default async function RealisationDetailPage({
+export default async function ProjectDetailPage({
     params,
 }: {
-    params: Promise<{ lang: 'fr' | 'en'; slug: string }>
+    params: Promise<{ lang: string; slug: string }>
 }) {
-    const { lang, slug } = await params
+    const { lang } = (await params) as { lang: 'fr' | 'en' }
+    const { slug } = await params
     const dict = await getDictionary(lang)
     const realisation = dict.realisations.items[slug]
 

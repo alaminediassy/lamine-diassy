@@ -6,9 +6,9 @@ import { Prose } from '@/components/ui/Prose'
 export default async function PresentationPage({
     params,
 }: {
-    params: Promise<{ lang: 'fr' | 'en' }>
+    params: Promise<{ lang: string }>
 }) {
-    const { lang } = await params
+    const { lang } = (await params) as { lang: 'fr' | 'en' }
     const dict = await getDictionary(lang)
 
     return (
