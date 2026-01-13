@@ -39,34 +39,34 @@ export default function CVModal({ isOpen, onClose, cvUrl, lang }: CVModalProps) 
                             leaveFrom="opacity-100 scale-100 translate-y-0"
                             leaveTo="opacity-0 scale-95 translate-y-4"
                         >
-                            <DialogPanel className="w-full max-w-5xl transform overflow-hidden rounded-3xl bg-marine-card border border-white/10 p-0 text-left align-middle shadow-2xl transition-all h-[85vh] flex flex-col">
-                                <div className="flex items-center justify-between p-6 border-b border-white/5">
-                                    <DialogTitle as="h3" className="text-xl font-bold text-soft">
+                            <DialogPanel className="w-full max-w-5xl transform overflow-hidden rounded-2xl sm:rounded-3xl bg-marine-card border border-white/10 p-0 text-left align-middle shadow-2xl transition-all h-[92dvh] sm:h-[85vh] flex flex-col mx-2 sm:mx-0">
+                                <div className="flex items-center justify-between p-4 sm:p-6 border-b border-white/5">
+                                    <DialogTitle as="h3" className="text-lg sm:text-xl font-bold text-soft truncate pr-4">
                                         {lang === 'fr' ? 'Prévisualisation du CV' : 'CV Preview'}
                                     </DialogTitle>
-                                    <div className="flex items-center gap-4">
+                                    <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
                                         <a
                                             href={cvUrl}
                                             download="CV MAMADOU EN.pdf"
-                                            className="flex items-center gap-2 px-4 py-2 rounded-full bg-oranger/10 text-oranger border border-oranger/20 hover:bg-oranger hover:text-white transition-all text-sm font-semibold"
+                                            className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-oranger/10 text-oranger border border-oranger/20 hover:bg-oranger hover:text-white transition-all text-xs sm:text-sm font-semibold"
                                         >
-                                            <Download size={18} />
-                                            <span className="hidden sm:inline">
+                                            <Download size={16} className="sm:w-[18px] sm:h-[18px]" />
+                                            <span>
                                                 {lang === 'fr' ? 'Télécharger' : 'Download'}
                                             </span>
                                         </a>
                                         <button
                                             onClick={onClose}
-                                            className="p-2 rounded-full hover:bg-white/5 text-soft transition-colors"
+                                            className="p-1.5 sm:p-2 rounded-full hover:bg-white/5 text-soft transition-colors"
                                         >
-                                            <X size={24} />
+                                            <X size={20} className="sm:w-[24px] sm:h-[24px]" />
                                         </button>
                                     </div>
                                 </div>
 
                                 <div className="flex-1 bg-white/5 relative overflow-hidden">
                                     <iframe
-                                        src={`${cvUrl}#toolbar=0`}
+                                        src={`${cvUrl}#view=FitW&toolbar=0&navpanes=0`}
                                         className="w-full h-full border-none"
                                         title="CV Preview"
                                     />
