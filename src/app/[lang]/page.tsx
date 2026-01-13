@@ -8,6 +8,8 @@ import { HomeSection } from '@/components/home/HomeSection'
 import { Specialties } from '@/components/home/Specialties'
 import { ContactCTA } from '@/components/home/ContactCTA'
 import { Container } from '@/components/Container'
+import CVButton from '@/components/home/CVButton'
+
 
 export default async function Home({
     params,
@@ -16,6 +18,7 @@ export default async function Home({
 }) {
     const { lang } = (await params) as { lang: 'en' | 'fr' }
     const dict = await getDictionary(lang)
+    const cvUrl = "/file/cv-mamadou-en.pdf"
 
     return (
         <main className="overflow-hidden">
@@ -60,9 +63,11 @@ export default async function Home({
                         <p className="text-soft-light text-base leading-relaxed max-w-3xl mb-0">
                             {dict.experiencesPro[0].description}
                         </p>
-                        <button className='mt-6 max-w-xl px-6 py-3 rounded-full border-1 border-oranger text-oranger hover:bg-white hover:text-[#0A192F] transition-colors hover:border-white hover:cursor-pointer'>
-                            {lang === 'fr' ? "Télécharger mon CV" : "Download my CV"}
-                        </button>
+                        <CVButton
+                            lang={lang}
+                            label={lang === 'fr' ? "Voir mon CV" : "See my CV"}
+                            cvUrl={cvUrl}
+                        />
                     </div>
                 </div>
             </HomeSection>

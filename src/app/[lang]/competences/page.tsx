@@ -1,4 +1,3 @@
-// src/app/[lang]/competences/page.tsx
 import { getDictionary } from '@/lib/i18n/dictionaries'
 import { SkillCard } from '@/components/skills/SkillCard'
 import { SimpleLayout } from '@/components/experiences/SimpleLayout'
